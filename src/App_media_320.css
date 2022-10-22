@@ -1,0 +1,460 @@
+@media screen and (max-width: 519px) {
+    * {
+        all: revert;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: Arial, Helvetica, Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    #container {
+        background-color: red;
+        background-color: #ffffff;
+        width: 320px;
+    }
+
+    #strip-top {
+        /* верхняя цветная полоса */
+        background-color: #00c3c3;
+        height: 10px;
+        width: 100%;
+    }
+
+    #banner-left {
+        /* блок с логотипом и названием сайта */
+        background-color: blueviolet;
+        background-color: #ffffff;
+        width: 60%;
+        height: 40px;
+        float: left;
+        position: relative;
+        /* надпись видна над 100% меню */
+        z-index: 3;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    header {
+        background-color: yellow;
+        background-color: #ffffff;
+        width: 100%;
+        min-height: 70px;
+    }
+
+    #banner-left img {
+        /* логотип сайта */
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        /* не знаю почему, но иконку по другому к краю не прижать */
+        left: -10px;
+        scale: 70%;
+    }
+
+    #banner-left p {
+        /* название сайта */
+        line-height: 40px;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        margin-left: 25%;
+        color: #00c3c3;
+        font-weight: 900;
+        font-size: 25px;
+    }
+
+    /* корзина */
+    #cart_mob {
+        display: block;
+        background-color: #ffffff;
+        width: 35px;
+        height: 30px;
+        float: right;
+        margin-right: 10px;
+        /* сдвигаем блок с иконками вверх */
+        margin-top: 10px;
+        border: 2px solid #ffffff;
+        /* для позиционирования иконок */
+        position: relative;
+        z-index: 5;
+    }
+
+    #cart_mob img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+    }
+
+    /* список товаров в корзине */
+    #cart_mob-list {
+        background-color: steelblue;
+        background-color: #ffffff;
+        width: 310px;
+        min-height: 0px;
+        margin-top: 40px;
+        margin-left: -220px;
+        padding-bottom: 30px;
+        position: relative;
+        display: none;
+    }
+
+    .cart_button_mob {
+        text-transform: uppercase;
+        background-color: #00c3c3;
+        border: 2px solid #00c3c3;
+        border-radius: 5px;
+        color: white;
+        font-size: 10px;
+        width: 100px;
+        height: 20px;
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+    }
+
+    #cart_list_ul_m li {
+        list-style-type: none;
+        margin-top: 5px;
+        margin-left: 5px;
+      }
+
+      #cart_table_m {
+        /* padding-bottom: 30px; */
+        width: 99%;
+      }
+      
+      #cart_table_m td {
+        border: 0px black solid;
+      }
+
+    #cart_mob:hover #cart_mob-list {
+        display: block;
+    }
+
+    #cart {
+        display: none;
+    }
+
+    #menu_ul {
+        height: 10px;
+        width: 100%;
+        /*  background-color: teal; */
+        position: relative;
+        /* чтобы строки меню перекрыли splash картинку */
+        z-index: 4;
+    }
+
+    #menu_ul a {
+        /* убираем подчеркивание */
+        text-decoration: none;
+        /* заглавные буквы */
+        text-transform: uppercase;
+    }
+
+    /* меню первого уровня */
+    .menu_li_a {
+        /* сдвигаем тексты меню первого уровня вправо */
+        margin-left: 10px;
+    }
+
+    /* чтобы курсор не соскакивал с меню */
+    #ham-wrope {
+        /*  background-color: darkgreen; */
+        display: block;
+        width: 35px;
+        height: 65px;
+        float: right;
+        margin-right: 10px;
+        /* сдвигаем блок с иконками вверх */
+        margin-top: -60px;
+        /* для позиционирования иконок */
+        position: relative;
+    }
+
+    /* гамбургер  */
+    #ham {
+        border: 2px solid #ffffff;
+        background-color: #ffffff;
+        width: 35px;
+        height: 30px;
+        position: relative;
+    }
+
+    #ham img {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+    }
+
+    #menu_ul li {
+        margin: 0;
+        padding: 0;
+        /* убираем маркеры */
+        list-style-type: none;
+        width: 100%;
+        background-color: #ffffff;
+        transition-property: opacity, visibility;
+        /* Добавляем анимацию 0.9 сек. */
+        transition-duration: 1.9s;
+        /* Добавляем задержку в 0.9 сек. */
+        transition-delay: 1.9s;
+        /* промежуток между строками меню */
+        border-top: 1px solid #00c3c3;
+        float: none;
+        text-align: unset;
+    }
+
+    .menu_li {
+        /* строки меню по умолчанию не видны */
+        display: none;
+    }
+
+    .menu_li_a {
+        color: black;
+        margin-left: 15px;
+    }
+
+    #li-account {
+        border-bottom: 1px solid #00c3c3;
+        float: none;
+    }
+
+    .drpdwn1_li_a {
+        /* сдвигаем тексты меню уровня X-X-X */
+        margin-left: 25px;
+        color: black;
+    }
+
+    .drpdwn2_li_a {
+        /* сдвигаем тексты меню уровня X-X-X */
+        margin-left: 40px;
+        color: black;
+    }
+
+    #li_sale_a {
+        color: black;
+    }
+
+    #menu_ul:hover .menu_li {
+        /* при ховеринге гамбургера видны строки  меню первого уровня */
+        display: block;
+    }
+
+    .menu_li:hover .menu_li_a {
+        /* выделение строк и текста выбранных уровней  */
+        background-color: yellowgreen;
+        background-color: #ffffff;
+        color: white;
+    }
+
+    .menu_li:hover #li_sale_a {
+        /* выделение строк и текста выбранных уровней  */
+        background-color: yellowgreen;
+        background-color: #ffffff;
+        color: white;
+    }
+
+    .drpdwn1_li:hover .drpdwn1_li_a {
+        /* выделение строк и текста выбранных уровней  */
+        background-color: yellowgreen;
+        background-color: #ffffff;
+        color: white;
+    }
+
+    .drpdwn2_li:hover .drpdwn2_li_a {
+        /* выделение строк и текста выбранных уровней  */
+        background-color: yellowgreen;
+        color: white;
+    }
+
+    main {
+        width: 100%;
+        min-height: 100px;
+        background-color: blue;
+        background-color: #ffffff;
+        padding-bottom: 5px;
+    }
+
+    #content {
+        width: 100%;
+        min-height: 160px;
+        background-color: seagreen;
+        background-color: #ffffff;
+        position: relative;
+    }
+
+    figure {
+        width: 100%;
+        min-height: 100px;
+        background-color: green;
+        background-color: #ffffff;
+        margin-top: 0;
+        float: none;
+        position: relative;
+    }
+
+    figure img {
+        margin: 0;
+        position: relative;
+        top: 0;
+        left: 96%;
+        /* поднимем картинку вверх на 10px */
+        transform: translate(-98%, -10px);
+        width: 96%;
+    }
+
+    article {
+        width: 96%;
+        min-height: 50px;
+        background-color: seagreen;
+        background-color: #ffffff;
+        margin: auto;
+        padding-top: 5px;
+        float: none;
+        position: relative;
+    }
+
+    article h4 {
+        margin: 0;
+        padding: 0;
+        margin-top: 5px;
+        text-transform: uppercase;
+    }
+
+    p {
+        padding-top: 5px;
+        font-size: 13px;
+        letter-spacing: 0.5pt;
+    }
+
+    .hr-divider {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        background-color: sienna;
+        background-color: #ffffff;
+    }
+
+    .hr-divider hr {
+        display: none;
+    }
+
+    table.tab {
+        display: none;
+    }
+
+    table.tab-m {
+        display: table;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .tab-m tr, td {
+        border: 1px black solid;
+        border: 0px black solid;
+        padding: 10px;
+    }
+
+    .tab-m img {
+        width: 100px;
+    }
+
+    .tab-m td {
+        text-align: center;
+    }
+
+    footer {
+        width: 100%;
+        min-height: 435px;
+        background-color: #b2c1c8;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    #foot-content {
+        background-color: green;
+        background-color: #b2c1c8;
+        width: 90%;
+        height: 410px;
+        margin: auto;
+    }
+
+    footer article {
+        all: revert;
+        background-color: seagreen;
+        background-color: #b2c1c8;
+        width: 100%;
+        min-height: 50px;
+        float: none;
+        border: 0px solid black;
+        font-size: 18px;
+    }
+
+    footer ul {
+        all: revert;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    footer li {
+        all: revert;
+        list-style: none;
+        text-transform: uppercase;
+        margin-left: 0px;
+    }
+
+    footer li a {
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+    }
+
+    footer article.foot3 {
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    footer li.li-top {
+        font-weight: bold;
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+
+
+    footer article.foot3 button {
+        width: 100%;
+        height: 24px;
+        font-size: 20px;
+    }
+    #envelope_li{
+        position: relative;
+      }
+      
+      #envelope {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        top: 5px;
+      }
+      
+      
+      footer article.foot3 input {
+        height: 25px;
+        width: 250px;
+        font-size: 15px;
+        padding-left: 30px;
+      }
+}
